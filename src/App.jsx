@@ -1,12 +1,16 @@
+import useCustomPointer from "./useCustomPointer"
 import useDate from "./useDate"
 import useSwitch from "./useSwitch"
 
 function App() {
   const [isOn, toogle] = useSwitch()
   const currentDate = useDate()
+  const CustomPointer = useCustomPointer("🔥")
 
   return (
     <>
+
+
       {/* Snack 1 - useSwitch() */}
       <div className="container my-4">
         <label>Snack 1</label>
@@ -21,7 +25,8 @@ function App() {
         <p>{currentDate.toLocaleString()}</p>
       </div>
 
-
+      {/* Snack 3 - useCustomPointer */}
+      <CustomPointer />
     </>
   )
 }
