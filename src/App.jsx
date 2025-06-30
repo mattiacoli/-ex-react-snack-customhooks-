@@ -1,11 +1,13 @@
 import useCustomPointer from "./useCustomPointer"
 import useDate from "./useDate"
+import useKeyPress from "./useKeyPress"
 import useSwitch from "./useSwitch"
 
 function App() {
   const [isOn, toogle] = useSwitch()
   const currentDate = useDate()
   const CustomPointer = useCustomPointer("🔥")
+  const isPressed = useKeyPress('Enter')
 
   return (
     <>
@@ -27,6 +29,13 @@ function App() {
 
       {/* Snack 3 - useCustomPointer */}
       <CustomPointer />
+
+      {/* Snack Bonus - useKeyPress() */}
+      <div className="container my-4">
+        <h3>Tieni premuto "Enter" per testare il custom hook</h3>
+        <p>{isPressed ? "Enter premuto! ✅" : "Aspettando input... ⌨️"}</p>
+      </div>
+
     </>
   )
 }
