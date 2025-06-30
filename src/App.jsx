@@ -32,6 +32,7 @@ function App() {
 
       {/* Snack Bonus - useKeyPress() */}
       <div className="container my-4">
+        <label>Snack Bonus</label>
         <h3>Tieni premuto "Enter" per testare il custom hook</h3>
         <p>{isPressed ? "Enter premuto! ✅" : "Aspettando input... ⌨️"}</p>
       </div>
